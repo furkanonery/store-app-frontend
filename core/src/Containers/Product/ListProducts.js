@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import api from '../Api/api';
+import api from '../../Api/api';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 import Container from 'react-bootstrap/esm/Container';
 
 function ListProducts() {
     const [products, setProducts] = useState([]);
     const [productGroups, setProductGroups] = useState([]);
+    const token = 'Token ' + localStorage.getItem('authToken');
 
-    useEffect(() => {
-        api.get('/api/products/')
+    useEffect((category) => {
+        api.get('/api/products/', {
+            headers: {
+                Authorization: token,
+            },
+        })
             .then(response => {
                 setProducts(response.data);
             })
