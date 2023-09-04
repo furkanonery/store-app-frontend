@@ -45,6 +45,7 @@ function Register() {
                 <Form.Group className="mb-3">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control type="text"
+                        required
                         placeholder="Enter First Name"
                         value={first_name}
                         onChange={(e) => setFirstname(e.target.value)} />
@@ -52,6 +53,7 @@ function Register() {
                 <Form.Group className="mb-3">
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control type="text"
+                        required
                         placeholder="Enter Last Name"
                         value={last_name}
                         onChange={(e) => setLastname(e.target.value)} />
@@ -59,6 +61,7 @@ function Register() {
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
                     <Form.Control type="text"
+                        required
                         placeholder="Enter username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)} />
@@ -67,6 +70,7 @@ function Register() {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password"
+                        required
                         placeholder="Enter password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} />
@@ -75,6 +79,7 @@ function Register() {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Re Password</Form.Label>
                     <Form.Control type="password"
+                        required
                         placeholder="Re Enter password"
                         value={password2}
                         onChange={(e) => setPassword2(e.target.value)} />
@@ -83,6 +88,7 @@ function Register() {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>E-Mail</Form.Label>
                     <Form.Control type="text"
+                        required
                         placeholder="Enter e-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)} />
