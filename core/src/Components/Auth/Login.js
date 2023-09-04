@@ -38,6 +38,7 @@ function Login() {
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
                     <Form.Control
+                        required
                         type="text"
                         placeholder="Enter username"
                         value={username}
@@ -47,6 +48,7 @@ function Login() {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
+                        required
                         type="password"
                         placeholder="Password"
                         value={password}
