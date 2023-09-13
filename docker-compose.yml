@@ -1,0 +1,6 @@
+services:
+  frontend:
+    build: ./core
+    ports:
+      - "3000:3000"
+    command: npm start
